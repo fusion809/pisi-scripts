@@ -4,7 +4,7 @@ if ! [[ -d $HOME/GitHub/mine/scripts ]]; then
 fi
 
 # Get openssh, if not pre-installed and Zsh
-sudo pisi install -y openssh zsh
+sudo pisi install -y openssh zsh git
 
 # Clone pisi-scripts repo
 if ! [[ -d $HOME/GitHub/mine/scripts/pisi-scripts ]]; then
