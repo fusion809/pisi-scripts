@@ -9,9 +9,9 @@ fi
 DISTRO=$(cat /etc/os-release | grep "^NAME" | sed -e 's/"//g' | sed -e 's/NAME=//g')
 
 if [[ $DISTRO == "Solus" ]]; then
-  sudo pisi install -y openssh git zsh
+  sudo pisi install -y openssh git zsh binutils
 else
-  sudo pisi install -y openssh git
+  sudo pisi install -y openssh git binutils
 fi
 
 # Clone pisi-scripts repo
