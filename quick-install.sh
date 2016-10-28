@@ -54,7 +54,7 @@ if [[ $DISTRO == "Solus" ]]; then
   fi
 
   # Change default login shell to Zsh
-  chsh -s /bin/zsh
-  sudo chsh -s /bin/zsh
+  sudo chsh -s /bin/zsh fusion809
+  sudo chsh -s /bin/zsh root
   /bin/zsh
 fi
