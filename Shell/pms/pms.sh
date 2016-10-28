@@ -9,3 +9,7 @@ function spiy {
 function spry {
   sudo pisi remove -y "$@"
 }
+
+function sps {
+  sudo pisi search "$@"
+}
