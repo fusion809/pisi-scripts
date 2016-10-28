@@ -9,6 +9,6 @@ export SCR=$GHUBM/scripts
 export THM=$GHUBM/themes
 export WEB=$GHUBM/websites
 export FGI=$WEB/fusion809.github.io
-export DBS=$SCR/debian-scripts
+export PS=$SCR/pisi-scripts
 export PY=$SCR/python-scripts
 export SHL=$HOME/Shell
