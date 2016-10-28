@@ -1,6 +1,8 @@
 # Create GitHub directory
-if ! [[ -d $HOME/GitHub/mine/scripts ]]; then
-  mkdir -p $HOME/GitHub/mine/scripts
+SCR="$HOME/GitHub/mine/scripts"
+PS="$SCR/pisi-scripts"
+if ! [[ -d $SCR ]]; then
+  mkdir -p $SCR
 fi
 
 # Get openssh, if not pre-installed and Zsh
@@ -13,12 +15,17 @@ else
 fi
 
 # Clone pisi-scripts repo
-if ! [[ -d $HOME/GitHub/mine/scripts/pisi-scripts ]]; then
-  git clone https://github.com/fusion809/pisi-scripts $HOME/GitHub/mine/scripts/pisi-scripts
-  # Copy across
-  cp -a $HOME/GitHub/mine/scripts/pisi-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/scripts/pisi-scripts/root/{Shell,.bashrc,.zshrc} /root/
+if ! [[ -d $PS ]]; then
+  git clone https://github.com/fusion809/pisi-scripts $PS
+else
+  cd $PS
+  git pull --all
+  cd -
 fi
+
+# Copy across
+cp -a $PS/{Shell,.bashrc,.zshrc} $HOME/
+sudo cp -a $PS/root/{Shell,.bashrc,.zshrc} /root/
 
 if [[ $DISTRO == "Solus" ]]; then
 
