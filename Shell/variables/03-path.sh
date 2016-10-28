@@ -1,0 +1,13 @@
+export LIB="/usr/lib"
+export JAVA_HOME="$LIB/jvm/oracle-jdk-bin-1.8/bin"
+export GOPATH="$HOME/go"
+export GOROOT="$LIB/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
+export DC="$HOME/Documents/CodeLite"
+export CCM="$DC/CPP-Math-Projects"
+export CFE="$CCM/Simple-Pendulum"
+alias CPSP=CFE
+export CFA="$CCM/Simple-Pendulum-Adjusted"
+alias CPSPA=CFA
+export CSP="$DC/C-Math-Projects"
